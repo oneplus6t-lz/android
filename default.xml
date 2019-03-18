@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote fetch="ssh://git@privgit.codeaurora.org:9222/external/private_p_LA.UM.7.3/" name="caf" review="codeaurora.org"/>
-  <remote fetch=".." name="oneplus" />
+  <remote fetch="git://codeaurora.org/" name="caf" review="codeaurora.org"/>
+  <default remote="caf" revision="LA.UM.7.3.r1"/>
+<remote fetch=".." name="oneplus" />
   <project name="abl/tianocore/edk2" path="bootable/bootloader/edk2" revision="7218bdd08bec6fd65d06f79b54fcc98a43bdde4c" upstream="refs/heads/uefi.lnx.1.9.r13-rel" remote="caf"/>
   <project groups="p-fs-release,pdk,pdk-cw-fs" name="device/common" revision="770294e776b4b76387c16f508c47e9be3a6b63bb" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
   <project groups="p-fs-release,pdk" name="device/generic/arm64" revision="0c87deab3b1d561f314ae12eed7e8681071ee93a" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
@@ -28,21 +29,21 @@
   <project groups="p-fs-release,pdk" name="device/google/vrservices" revision="5a724230386bd7a2176ddae612f79dd3caefc6ce" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
   <project groups="device,p-fs-release,pdk,wahoo" name="device/google/wahoo" revision="3785c836b1c9cb2f1a8c151912ef23bdc04970ff" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
   <project groups="device,p-fs-release,pdk,wahoo" name="device/google/wahoo-kernel" revision="bcdf44b81d8a67dc4c774bac362ecdb2f0cde2ba" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
-  <project name="device/qcom/common" remote="oneplus" revision="oneplus6/9.0.0">
+  <project name="OnePlusOSS/android_device_qcom_common" path="device/qcom/common" remote="oneplus" revision="oneplus6/9.0.0">
     <copyfile dest="build.sh" src="build.sh"/>
     <linkfile dest="vendor/qcom/build/tasks/generate_extra_images.mk" src="generate_extra_images.mk"/>
     <linkfile dest="kernel/Android.mk" src="stop_scan.mk"/>
     <linkfile dest="disregard/Android.mk" src="stop_scan.mk"/>
   </project>
   <project name="device/qcom/qssi" revision="2ce43dc56dddc9de37535ff7e25693bce070ebbc" upstream="refs/heads/qcom-devices.lnx.4.0.r5-rel" remote="caf"/>
-  <project name="device/qcom/sepolicy" remote="oneplus" revision="oneplus6/9.0.0"/>
+  <project name="OnePlusOSS/android_device_qcom_sepolicy" path="device/qcom/sepolicy" remote="oneplus" revision="oneplus6/9.0.0"/>
   <project groups="p-fs-release,pdk" name="device/sample" revision="e6d9f5047dde76279e6e8ccc87f51032dc469d35" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
   <project groups="p-fs-release,pdk,vts" name="kernel/configs" revision="08bde9b0cf29c191c220080c95817994da48b214" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
   <project name="OnePlusOSS/android_kernel_oneplus_sdm845" path="kernel/msm-4.9" remote="oneplus" revision="oneplus/SDM845_P_9.0"/>
   <project groups="p-fs-release,pdk" name="platform/art" path="art" revision="63d4ed8e8610ce4e29584b0929faf72cca0789fc" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
   <project groups="p-fs-release,pdk" name="platform/bionic" path="bionic" revision="8788a8a9618f3e40ad6c84ff44b1c63a245c09f1" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
   <project groups="p-fs-release,pdk" name="platform/bootable/recovery" path="bootable/recovery" revision="a6741b4e13641628cc2c1cd7496362facab6bacb" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
-  <project groups="p-fs-release,pdk" name="platform/build" path="build/make" remote="oneplus" revision="oneplus6/9.0.0">
+  <project groups="p-fs-release,pdk" name="OnePlusOSS/android_build" path="build/make" remote="oneplus" revision="oneplus6/9.0.0">
     <copyfile dest="Makefile" src="core/root.mk"/>
     <linkfile dest="build/CleanSpec.mk" src="CleanSpec.mk"/>
     <linkfile dest="build/buildspec.mk.default" src="buildspec.mk.default"/>
@@ -75,7 +76,7 @@
   <project groups="p-fs-release,pdk" name="platform/external/androidplot" path="external/androidplot" revision="355d0ec81d2a50e5334bdf6ba9dc4635baa13706" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
   <project groups="p-fs-release,pdk" name="platform/external/annotation-tools" path="external/annotation-tools" revision="9966c7aa3ccd2fd0cfc76598c2bfe6d77016b2ad" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
   <project groups="p-fs-release,pdk" name="platform/external/ant-glob" path="external/ant-glob" revision="a73228afa9540b9c5518d360c5ae630bb634f975" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
-  <project name="platform/external/ant-wireless/ant_native" path="external/ant-wireless/ant_native" remote="oneplus" revision="oneplus6/9.0.0"/>
+  <project name="OnePlusOSS/android_external_ant-wireless_ant_native" path="external/ant-wireless/ant_native" remote="oneplus" revision="oneplus6/9.0.0"/>
   <project name="platform/external/ant-wireless/ant_service" path="external/ant-wireless/ant_service" revision="7dcbaffdb0923ef69b397c8603a863c71c968de7" upstream="refs/heads/ant.lnx.2.9.1.r22-rel" remote="caf"/>
   <project groups="p-fs-release,pdk" name="platform/external/antlr" path="external/antlr" revision="2d2bc6f9c2959f787364826de5c40743aad3d586" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
   <project groups="p-fs-release,pdk" name="platform/external/apache-commons-math" path="external/apache-commons-math" revision="5b92751071356eef97c50dbeccc3874b51847afb" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
@@ -394,7 +395,7 @@
   <project groups="p-fs-release,pdk,qcom_msm8x26" name="platform/external/webp" path="external/webp" revision="b8a8cd5075860c44e6fd5d0d2e529ff2e0417d7d" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
   <project groups="p-fs-release,pdk" name="platform/external/webrtc" path="external/webrtc" revision="1199eb57e5a0bef4e438a5a847ff1af165c4feed" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
   <project groups="p-fs-release,pdk" name="platform/external/webview_support_interfaces" path="external/webview_support_interfaces" revision="8ae24e5a50f1fd4eb3f72373139822872b3a39e8" upstream="refs/heads/LA.UM.7.3.r1" remote="caf"/>
-  <project groups="p-fs-release,pdk" name="platform/external/wpa_supplicant_8" path="external/wpa_supplicant_8" remote="oneplus" revision="oneplus6/9.0.0"/>
+  <project groups="p-fs-release,pdk" name="OnePlusOSS/android_external_wpa_supplicant_8" path="external/wpa_supplicant_8" remote="oneplus" revision="oneplus6/9.0.0"/>
   <project groups="p-fs-release,pdk" name="platform/external/wycheproof" path="external/wycheproof" revision="ba3228e3c24d419499d91c7aaabf5ce63b75fdd0" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
   <project groups="p-fs-release,pdk" name="platform/external/x264" path="external/x264" revision="1b633edcbf9847ac9fb46917c73bf8466ae71078" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
   <project groups="p-fs-release,pdk" name="platform/external/xmlrpcpp" path="external/xmlrpcpp" revision="c79d4eae757a81270915c2a7cf01c81b8d42785e" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
@@ -405,13 +406,13 @@
   <project groups="p-fs-release,pdk" name="platform/external/zopfli" path="external/zopfli" revision="76d7da2a87daf777c20078f647f78f776d981fd0" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
   <project groups="p-fs-release,pdk" name="platform/external/zxing" path="external/zxing" revision="8c79be4cc4084d0f508aefba40203383e6ca342c" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
   <project groups="p-fs-release,pdk" name="platform/frameworks/av" path="frameworks/av" revision="dbead6f0e3c238ab02964740a762f740e6988bfe" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
-  <project groups="p-fs-release,pdk-cw-fs,pdk-fs" name="platform/frameworks/base" path="frameworks/base" remote="oneplus" revision="oneplus6/9.0.0"/>
+  <project groups="p-fs-release,pdk-cw-fs,pdk-fs" name="OnePlusOSS/android_frameworks_base" path="frameworks/base" remote="oneplus" revision="oneplus6/9.0.0"/>
   <project groups="p-fs-release,pdk" name="platform/frameworks/compile/libbcc" path="frameworks/compile/libbcc" revision="79ec1c11e187864ffe62f8c7840d1a9ba363e9f4" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
   <project groups="p-fs-release,pdk" name="platform/frameworks/compile/mclinker" path="frameworks/compile/mclinker" revision="58444cdff5e5b44ec4d40196ae37c5985b48e3b1" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
   <project groups="p-fs-release,pdk" name="platform/frameworks/compile/slang" path="frameworks/compile/slang" revision="fdcf50863296b63211e77e9a225a641da18cf50e" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
   <project groups="p-fs-release,pdk-cw-fs,pdk-fs" name="platform/frameworks/data-binding" path="frameworks/data-binding" revision="a53fdf4a28693a8ebbc5d3fef1e44423a560dc90" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
   <project groups="p-fs-release,pdk-cw-fs,pdk-fs" name="platform/frameworks/ex" path="frameworks/ex" revision="0e34e38a5a99eb8ec1adcfd07e027620aca9596d" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
-  <project groups="p-fs-release,pdk" name="platform/frameworks/hardware/interfaces" path="frameworks/hardware/interfaces" remote="oneplus" revision="oneplus6/9.0.0"/>
+  <project groups="p-fs-release,pdk" name="OnePlusOSS/android_hardware_interfaces" path="frameworks/hardware/interfaces" remote="oneplus" revision="oneplus6/9.0.0"/>
   <project groups="p-fs-release,pdk-cw-fs,pdk-fs" name="platform/frameworks/layoutlib" path="frameworks/layoutlib" revision="e6b3068aaf265bf2bc3f59f7afbeaae84cc56a85" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
   <project groups="p-fs-release,pdk-cw-fs,pdk-fs" name="platform/frameworks/minikin" path="frameworks/minikin" revision="890583158a0cdc31ecb910d889ccb4eb3f34e814" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
   <project groups="p-fs-release,pdk" name="platform/frameworks/ml" path="frameworks/ml" revision="dce7dd36e166e345f1e770eb365f7e03eec65351" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
@@ -450,12 +451,12 @@
   <project groups="p-fs-release,pdk" name="platform/hardware/libhardware_legacy" path="hardware/libhardware_legacy" revision="37bd09cc953d157ed5939020e1525adad468403f" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
   <project name="platform/hardware/nxp/nfc" path="hardware/nxp/nfc" revision="c8c0e443171096c643bacb820546395d8a5c52ec" upstream="refs/heads/LA.UM.7.3.r1" remote="caf"/>
   <project name="platform/hardware/nxp/secure_element" path="hardware/nxp/secure_element" revision="00b21e6132bd78229ae47ac29d43a4bec3a62dea" upstream="refs/heads/LA.UM.7.3.r1" remote="caf"/>
-  <project name="platform/hardware/qcom/audio" path="hardware/qcom/audio" remote="oneplus" revision="oneplus6/9.0.0"/>
+  <project name="OnePlusOSS/android_hardware_qcom_audio" path="hardware/qcom/audio" remote="oneplus" revision="oneplus6/9.0.0"/>
   <project name="platform/hardware/qcom/bootctrl" path="hardware/qcom/bootctrl" revision="a97b222c6e8bae45ff102575f76973dae97dc9ce" upstream="refs/heads/android-blast.lnx.3.0.r5-rel" remote="caf"/>
-  <project name="platform/hardware/qcom/bt" path="hardware/qcom/bt" remote="oneplus" revision="oneplus6/9.0.0"/>
+  <project name="OnePlusOSS/android_hardware_qcom_bt" path="hardware/qcom/bt" remote="oneplus" revision="oneplus6/9.0.0"/>
   <project name="platform/hardware/qcom/display" path="hardware/qcom/display" revision="622f0981f5c4efef93932d33495840bdcf86506b" upstream="refs/heads/display.lnx.4.1.r2-rel" remote="caf"/>
   <project name="platform/hardware/qcom/gps" path="hardware/qcom/gps" revision="fe72860c8b9e835011c6f6bd0fd0ea73660a5925" upstream="refs/heads/location.lnx.3.9.r5-rel" remote="caf"/>
-  <project name="platform/hardware/qcom/media" path="hardware/qcom/media" remote="oneplus" revision="oneplus6/9.0.0"/>
+  <project name="OnePlusOSS/android_hardware_qcom_media" path="hardware/qcom/media" remote="oneplus" revision="oneplus6/9.0.0"/>
   <project name="platform/hardware/qcom/thermal" path="hardware/qcom/thermal" revision="e1337638204afc87b9f225af3880b2f25e1dd903" upstream="refs/heads/qvr.lnx.4.0.r2-rel" remote="caf"/>
   <project name="platform/hardware/qcom/vr" path="hardware/qcom/vr" revision="36590bd74d96b21a2a31d414ad80c6028022a535" upstream="refs/heads/qvr.lnx.4.0.r2-rel" remote="caf"/>
   <project name="platform/hardware/qcom/wlan" path="hardware/qcom/wlan" revision="348333766408a76bf80d09c7cf5c3f6561d3e4c3" upstream="refs/heads/LA.UM.7.3.r1" remote="caf"/>
@@ -599,7 +600,7 @@
   <project groups="p-fs-release,pdk-cw-fs,pdk-fs" name="platform/sdk" path="sdk" revision="33b15f555af1b85c66d0c908c746b185706dc3ac" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
   <project groups="p-fs-release,pdk" name="platform/system/bt" path="system/bt" revision="db242b8c247a77c859233a7c6027d383a41c41b3" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
   <project groups="p-fs-release,pdk" name="platform/system/ca-certificates" path="system/ca-certificates" revision="40c99a61c93a97365fa8ff05ec8dcbe9075226f6" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
-  <project groups="p-fs-release,pdk" name="platform/system/chre" path="system/chre" remote="oneplus" revision="oneplus6/9.0.0"/>
+  <project groups="p-fs-release,pdk" name="OnePlusOSS/android_system_chre" path="system/chre" remote="oneplus" revision="oneplus6/9.0.0"/>
   <project groups="p-fs-release,pdk" name="platform/system/connectivity/wificond" path="system/connectivity/wificond" revision="1aa495f52e165f908c499e451a2f841426acc5d1" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
   <project groups="p-fs-release,pdk" name="platform/system/connectivity/wifilogd" path="system/connectivity/wifilogd" revision="20cfc76d65b887d9f34917c6a506b6e9cc834d71" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
   <project groups="p-fs-release,pdk" name="platform/system/core" path="system/core" revision="4aaf418cc71ba222c15cdf50f5b101100cd05132" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
@@ -666,7 +667,7 @@
   <project name="platform/vendor/nxp/opensource/halimpl" path="vendor/nxp/opensource/halimpl" revision="f9b288b629862a42226fbe58fd9db89f4b117359" upstream="refs/heads/nfc.lnx.4.0.r5-rel" remote="caf"/>
   <project name="platform/vendor/nxp/opensource/hidlimpl" path="vendor/nxp/opensource/hidlimpl" revision="63e8f7a38062c11dc09a5ee487e06c65cc187aac" upstream="refs/heads/nfc.lnx.4.0.r5-rel" remote="caf"/>
   <project name="platform/vendor/nxp/opensource/packages/apps/Nfc" path="vendor/nxp/opensource/commonsys/packages/apps/Nfc" revision="de1b14eda17ca3926896a0787300dfaa724f1a1f" upstream="refs/heads/nfc.lnx.4.0.r5-rel" remote="caf"/>
-  <project name="platform/vendor/opensource/audio-kernel" path="kernel/msm-4.9/techpack/audio" remote="oneplus" revision="oneplus/SDM845_P_9.0"/>
+  <project name="OnePlusOSS/android_kernel_oneplus_sdm845_techpack_audio" path="kernel/msm-4.9/techpack/audio" remote="oneplus" revision="oneplus/SDM845_P_9.0"/>
   <project name="platform/vendor/qcom-opensource/audio" path="vendor/qcom/opensource/audio" revision="857b03014611f35e9fe0fa8ad3ce53367b5cbc12" upstream="refs/heads/av-aosp-qc.lnx.5.0.r4-rel" remote="caf"/>
   <project name="platform/vendor/qcom-opensource/bluetooth" path="vendor/qcom/opensource/commonsys/bluetooth" revision="370f85bd54dfba770e066ec435cb86d5da28bc8b" upstream="refs/heads/bt-qc.lnx.4.0.r5-rel" remote="caf"/>
   <project name="platform/vendor/qcom-opensource/bluetooth_ext" path="vendor/qcom/opensource/commonsys/bluetooth_ext" revision="7f391039f361c394e80342623ae3aefae24db911" upstream="refs/heads/bt.lnx.4.0.r6-rel" remote="caf"/>
@@ -680,17 +681,17 @@
   <project name="platform/vendor/qcom-opensource/display-commonsys-intf" path="vendor/qcom/opensource/commonsys-intf/display" revision="6ebd7399dff5be92426dd86fb23d0cc58f51cb1f" upstream="refs/heads/display.lnx.4.1.r2-rel" remote="caf"/>
   <project name="platform/vendor/qcom-opensource/dpm" path="vendor/qcom/opensource/dpm" revision="7a1d81e4aa18fc0317e7ba51f6d0c0e9c683ae08" upstream="refs/heads/data.lnx.4.0.r5-rel" remote="caf"/>
   <project name="platform/vendor/qcom-opensource/dpm-commonsys" path="vendor/qcom/opensource/commonsys/dpm" revision="af0a5cf3d65a9ef58dee50008c6b7ea8d993e471" upstream="refs/heads/data.lnx.4.0.r5-rel" remote="caf"/>
-  <project name="platform/vendor/qcom-opensource/fm" path="vendor/qcom/opensource/fm" remote="oneplus" revision="oneplus6/9.0.0"/>
-  <project name="platform/vendor/qcom-opensource/fm-commonsys" path="vendor/qcom/opensource/commonsys/fm" remote="oneplus" revision="oneplus6/9.0.0"/>
+  <project name="OnePlusOSS/android_vendor_qcom_opensource_fm" path="vendor/qcom/opensource/fm" remote="oneplus" revision="oneplus6/9.0.0"/>
+  <project name="OnePlusOSS/android_vendor_qcom_opensource_commonsys_fm" path="vendor/qcom/opensource/commonsys/fm" remote="oneplus" revision="oneplus6/9.0.0"/>
   <project name="platform/vendor/qcom-opensource/fst-manager" path="vendor/qcom/opensource/fst-manager" revision="e7be8a4acdaa21cb2c797e6e4abab8fe560a078e" upstream="refs/heads/wigig.lnx.3.0.r2-rel" remote="caf"/>
   <project name="platform/vendor/qcom-opensource/healthd-ext" path="vendor/qcom/opensource/healthd-ext" revision="6d0c51bb7b9c4082e0d75712e6ce7815a670b0bb" upstream="refs/heads/qcom-devices.lnx.4.0.r5-rel" remote="caf"/>
   <project name="platform/vendor/qcom-opensource/interfaces" path="vendor/qcom/opensource/interfaces" revision="82f4060b078775ea2cb4a43817f1cdf5557c8e6c" upstream="refs/heads/android-vendor-hals.lnx.1.1.r6-rel" remote="caf"/>
-  <project name="platform/vendor/qcom-opensource/location" path="vendor/qcom/opensource/location" remote="oneplus" revision="oneplus6/9.0.0"/>
+  <project name="OnePlusOSS/android_vendor_qcom_opensource_location" path="vendor/qcom/opensource/location" remote="oneplus" revision="oneplus6/9.0.0"/>
   <project name="platform/vendor/qcom-opensource/mmc-utils" path="vendor/qcom/opensource/mmc-utils" revision="053754b3d2550699c3a70eedbe655268cfeeae6c" upstream="refs/heads/core-technologies.lnx.2.0.r5-rel" remote="caf"/>
   <project name="platform/vendor/qcom-opensource/power" path="vendor/qcom/opensource/power" revision="986eae824d605fd116c0242ef75f234c2b877203" upstream="refs/heads/qcom-devices.lnx.4.0.r5-rel" remote="caf"/>
   <project name="platform/vendor/qcom-opensource/recovery-ext" path="vendor/qcom/opensource/recovery-ext" revision="82990ff8b8519d40c4e90f7e28fd0a0ba0c7fd91" upstream="refs/heads/qcom-devices.lnx.4.0.r5-rel" remote="caf"/>
   <project name="platform/vendor/qcom-opensource/shortcut-fe" path="shortcut-fe" revision="214ece874ced71fcbeb2fbc0a218b0824be60c34" upstream="refs/heads/data.lnx.4.0.r5-rel" remote="caf"/>
-  <project name="platform/vendor/qcom-opensource/system/bt" path="vendor/qcom/opensource/commonsys/system/bt" remote="oneplus" revision="oneplus6/9.0.0"/>
+  <project name="OnePlusOSS/android_vendor_qcom_opensource_commonsys_system_bt" path="vendor/qcom/opensource/commonsys/system/bt" remote="oneplus" revision="oneplus6/9.0.0"/>
   <project name="platform/vendor/qcom-opensource/thermal-engine" path="vendor/qcom/opensource/thermal-engine" revision="86fbb876ce1fb7b1e83c8f93dc31248d3dacdd06" upstream="refs/heads/qcom-devices.lnx.4.0.r5-rel" remote="caf"/>
   <project name="platform/vendor/qcom-opensource/time-services" path="vendor/qcom/opensource/time-services" revision="ee423b6049462f0be338ca1c325483cbbcfedf9f" upstream="refs/heads/core-technologies.lnx.2.0.r5-rel" remote="caf"/>
   <project name="platform/vendor/qcom-opensource/tools" path="vendor/qcom/opensource/tools" revision="73c47e9f4081e0d4622a41012301951900ea4d60" upstream="refs/heads/opensource-tools.lnx.1.0.r34-rel" remote="caf"/>
@@ -699,13 +700,13 @@
   <project name="platform/vendor/qcom-opensource/wigig" path="vendor/qcom/opensource/wigig" revision="715d7d2d45fa827e1ace3ad1aad3bd74f4bef7b7" upstream="refs/heads/wigig.lnx.3.0.r2-rel" remote="caf"/>
   <project name="platform/vendor/qcom-opensource/wlan/fw-api" path="vendor/qcom/opensource/wlan/fw-api" revision="19ce3b378897fb3f3e1bd9f4f0038b1fc3f75476" upstream="refs/heads/wlan-api.lnx.1.1.r44-rel" remote="caf"/>
   <project name="platform/vendor/qcom-opensource/wlan/qca-wifi-host-cmn" path="vendor/qcom/opensource/wlan/qca-wifi-host-cmn" revision="f4849654ee3972b0bd495e5ba9266d3dd4ec6ac3" upstream="refs/heads/wlan-cmn.driver.lnx.1.0.r40-rel" remote="caf"/>
-  <project name="platform/vendor/qcom-opensource/wlan/qcacld-3.0" path="vendor/qcom/opensource/wlan/qcacld-3.0" remote="oneplus" revision="oneplus6/9.0.0"/>
+  <project name="OnePlusOSS/android_vendor_qcom-opensource_wlan_qcacld-3.0" path="vendor/qcom/opensource/wlan/qcacld-3.0" remote="oneplus" revision="oneplus6/9.0.0"/>
   <project name="platform/vendor/qcom-opensource/wlan/utils/sigma-dut" path="vendor/qcom/opensource/wlan/utils/sigma-dut" revision="4fd6365ad952d59b86f9562467ffa3fa0f8c3387" upstream="refs/heads/wlan-service.lnx.4.0.r5-rel" remote="caf"/>
   <project name="platform/vendor/qcom/ferrum" path="device/qcom/msm8909" revision="11c00661d1d0962527a27bfafc3015d9c1c9d2d9" upstream="refs/heads/qcom-devices.lnx.4.0.r5-rel" remote="caf"/>
   <project name="platform/vendor/qcom/msm8909go" path="device/qcom/msm8909go" revision="f57e18318748365c3af79f676a74a7c03c7e840e" upstream="refs/heads/qcom-devices.lnx.4.0.r5-rel" remote="caf"/>
-  <project name="platform/vendor/qcom/skunk" path="device/qcom/sdm845" remote="oneplus" revision="oneplus6/9.0.0"/>
+  <project name="OnePlusOSS/android_vendor_qcom_skunk" path="device/qcom/sdm845" remote="oneplus" revision="oneplus6/9.0.0"/>
   <project name="platform/vendor/qcom/thulium" path="device/qcom/msm8996" revision="9a086fe73b38c1a32e6b3b627aa7307053811759" upstream="refs/heads/qcom-devices.lnx.4.0.r5-rel" remote="caf"/>
-  <project groups="p-fs-release,pdk" name="toolchain/binutils" revision="3ccc3ec75f2f1f55af1e4966fd6a22c34af13b3d" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
-  <project groups="p-fs-release,pdk" name="toolchain/pgo-profiles" revision="fdf2c6c85c16291eac8a97606598b6c09784f6f5" upstream="refs/heads/LA.UM.7.3.r1" remote="caf"/>
+  <project groups="p-fs-release,pdk" name="quic/la/toolchain/binutils" path="toolchain/binutils" revision="3ccc3ec75f2f1f55af1e4966fd6a22c34af13b3d" upstream="refs/heads/ks-aosp.lnx.1.0.r1-rel" remote="caf"/>
+  <project groups="p-fs-release,pdk" name="quic/la/toolchain/pgo-profiles" path="toolchain/pgo-profiles" revision="fdf2c6c85c16291eac8a97606598b6c09784f6f5" upstream="refs/heads/LA.UM.7.3.r1" remote="caf"/>
   <project name="OnePlusOSS/android_vendor_oneplus_SDM845" path="vendor/oneplus" remote="oneplus" revision="oneplus6/9.0.0"/>
 </manifest>
